@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Demo</title>
+</head>
+<body>
+Hello Flask<br>
+<img src="../static/timg.jpg">
+{% if users %}
+<table border="1px">
+    <tr>
+        <th>UserName</th>
+        <th>age</th>
+    </tr>
+    {% for u in users %}
+        <tr>
+            <td>{{u.name}}</td>
+            <td>{{u.age}}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endif %}
+</body>
+</html>
